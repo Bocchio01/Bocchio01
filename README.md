@@ -1,4 +1,4 @@
-## Welcome :panda_face:!
+# Welcome :panda_face:!
 
 Here is Tommaso, an undergraduate mechanical engineering student @Politecnico_di_Milano (third year).
 
@@ -6,7 +6,7 @@ Since the high school, where I had the opportunity to begin coding in **_C_**, I
 
 ## Interests
 
-My main interests are in the fields of applied mathematics and robotics.
+**My main interests are in the fields of applied mathematics and robotics.**
 
 I'm particularly fascinated by the idea of transcribe the real world physics into code using mathematical equations.
 

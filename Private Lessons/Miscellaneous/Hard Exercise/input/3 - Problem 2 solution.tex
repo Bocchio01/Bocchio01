@@ -1,0 +1,87 @@
+% LTeX: language=it
+
+\subsection{Problema 2}
+Come prima, è possibile visualizzare i due vettori e il vettore prodotto in un piano cartesiano tridimensionale.
+Si sottolinea come la figura seguente non rappresenti la soluzione del problema, ma sia solo un aiuto visivo per la comprensione del problema.
+\begin{center}
+    \begin{tikzpicture}[x=1cm, y=1cm, z=-0.6cm]
+        % Axes
+        \draw [->] (-3,0,0) -- (4,0,0) node [right] {$x$};
+        \draw [->] (0,0,0) -- (0,4,0) node [left] {$y$};
+        \draw [->] (0,0,0) -- (0,0,4) node [left] {$z$};
+        % Vectors
+        \draw [->, thick] (0,0,0) -- (2,2,0);
+        \draw [->, thick] (0,0,0) -- (2,0,1);
+        \draw [->, thick, red] (0,0,0) -- (-2,2,4);
+        % Ticks
+        \foreach \i in {1, 2, 3}
+            {
+                \draw (-0.1,\i,0) -- ++ (0.2,0,0);
+                \draw (\i,-0.1,0) -- ++ (0,0.2,0);
+                \draw (-0.1,0,\i) -- ++ (0.2,0,0);
+            }
+        \draw (-1,-0.1,0) -- ++ (0,0.2,0);
+        \draw (-2,-0.1,0) -- ++ (0,0.2,0);
+        % Dashed lines
+        \draw [loosely dashed]
+        (0,2,0) -- (2,2,0) -- (2,0,0)
+        (0,0,1) -- (2,0,1) -- (2,0,0)
+        (0,0,4) -- (-2,0,4) -- (-2,2,4)
+        (-2,0,0) -- (-2,0,4)
+        ;
+        % Labels
+        \node [right] at (2,2,0) {$\begin{bmatrix}
+                    2 \\2\\0
+                \end{bmatrix}$};
+        \node [below] at (2,0,1) {$\begin{bmatrix}
+                    2 \\0\\1
+                \end{bmatrix}$};
+        \node [above] at (-2,2,4) {$\begin{bmatrix}
+                    -2 \\2\\4
+                \end{bmatrix}$};
+
+    \end{tikzpicture}
+\end{center}
+
+\noindent Si procede ora al calcolo del prodotto vettoriale tra $\vec{a}$ e $\vec{b}$:
+\begin{equation}
+    \vec{a} \times \vec{b} = \begin{vmatrix}
+        \vec{i} & \vec{j}     & \vec{k}               \\
+        1       & \frac{1}{3} & 3+6\sqrt{\frac{2}{5}} \\
+        3       & 1           & 9
+    \end{vmatrix} = \vec{i} \begin{vmatrix}
+        \frac{1}{3} & 3+6\sqrt{\frac{2}{5}} \\
+        1           & 9
+    \end{vmatrix} - \vec{j} \begin{vmatrix}
+        1 & 3+6\sqrt{\frac{2}{5}} \\
+        3 & 9
+    \end{vmatrix} + \vec{k} \begin{vmatrix}
+        1 & \frac{1}{3} \\
+        3 & 1
+    \end{vmatrix}
+\end{equation}
+Si procede ora al calcolo dei determinanti:
+\begin{equation}
+    \begin{split}
+        \begin{vmatrix}
+            \frac{1}{3} & 3+6\sqrt{\frac{2}{5}} \\
+            1           & 9
+        \end{vmatrix} = \frac{1}{3} * 9 - (3+6\sqrt{\frac{2}{5}}) = -6\sqrt{\frac{2}{5}} \\
+        \begin{vmatrix}
+            1 & 3+6\sqrt{\frac{2}{5}} \\
+            3 & 9
+        \end{vmatrix} = 1 * 9 - 3(3+6\sqrt{\frac{2}{5}}) = -18\sqrt{\frac{2}{5}} \\
+        \begin{vmatrix}
+            1 & \frac{1}{3} \\
+            3 & 1
+        \end{vmatrix} = 1 * 1 - \frac{1}{3} * 3 = 1 - 1 = 0
+    \end{split}
+\end{equation}
+Si procede ora al calcolo del prodotto vettoriale:
+\begin{equation}
+    \vec{a} \times \vec{b} = \vec{i} (-6\sqrt{\frac{2}{5}}) - \vec{j} (-18\sqrt{\frac{2}{5}}) + \vec{k} * 0 = (-6\sqrt{\frac{2}{5}})\vec{i} + (18\sqrt{\frac{2}{5}})\vec{j}
+\end{equation}
+Si procede ora al calcolo del modulo del prodotto vettoriale:
+\begin{equation}
+    |\vec{a} \times \vec{b}| = \sqrt{(-6\sqrt{\frac{2}{5}})^2 + (18\sqrt{\frac{2}{5}})^2} = \sqrt{36\frac{2}{5} + 324\frac{2}{5}} = \sqrt{\frac{720}{5}} = \sqrt{144} = 12
+\end{equation}

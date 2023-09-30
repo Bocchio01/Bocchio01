@@ -1,6 +1,6 @@
 # Welcome :panda_face:!
 
-Here is Tommaso, an undergraduate mechanical engineering student @Politecnico_di_Milano (third year).
+Here is Tommaso, a recent graduate with a Bachelor's degree in Mechanical Engineering from @Politecnico_di_Milano.
 
 Since the high school, where I had the opportunity to begin coding in **_C_**, I pursued this passion and explored as much as possible.
 
@@ -10,15 +10,15 @@ Since the high school, where I had the opportunity to begin coding in **_C_**, I
 
 I'm particularly fascinated by the idea of transcribe the real world physics into code using mathematical equations.
 
-After graduation, I will attend the _MSc Robotics and Mechatronic_ course to explore even more than I can do as a self-taught.
+Currently I'm attending the _MSc Robotics and Mechatronic_ course at @Politecnico_di_Milano, where I'm exploring even more than I can do as a self-taught.
 
 </br>
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=Bocchio01&show_icons=true&title_color=ffa500&bg_color=000000&text_color=ffffff&card_width=480" />
+<!-- <img src="https://github-readme-stats.vercel.app/api?username=Bocchio01&show_icons=true&title_color=ffa500&bg_color=000000&text_color=ffffff&card_width=480" />
 
-</br>
+</br> -->
 
 <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Bocchio01&show_icons=true&title_color=ffa500&bg_color=000000&text_color=ffffff&exclude_repo=Personal_web_site&langs_count=4&layout=compact&card_width=430" />
 

@@ -2,6 +2,152 @@
 
 \section{Goniometria}
 
+Un angolo può essere misurato in gradi o radianti, infatti si ha $\alpha^{\circ}=\alpha[rad] \frac{180^{\circ}}{\pi}$.
+Considerando una circonferenza goniometrica (raggio $r=1$), un angolo orientato $\alpha$, dal prolungamento del lato dell'angolo $\alpha$, otteniamo l'intersezione $B$, dove:
+
+\begin{figure}[h]
+    \centering
+    % \begin{tikzpicture}
+    %     \begin{axis}[
+    %             unit vector ratio* = 1 1 1,
+    %             clip=false,
+    %             width=\textwidth,
+    %             height=0.5*\textwidth,
+    %             axis lines = middle,
+    %             ymax=1.5,
+    %             ymin=-1.5,
+    %             xmax = 1.5,
+    %             xmin = -1.5,
+    %             xtick = {-1, 0, 1},
+    %             ytick = {-1, 0, 1}
+    %         ]
+    %     \end{axis}
+    %     % \draw (-1,0) node[left] {$(-1,0)$} -- (1,0) node[right] {$(1,0)$};
+    %     % \draw (0,-1) node[below] {$(0,-1)$} -- (0,1) node[above] {$(0,1)$};
+    %     \draw (center) coordinate (O) circle (1);
+    %     \draw[red, very thick] (30:1cm) coordinate (B) -- (0,0-|B) coordinate(Bx) node[midway,left]{$\sin\alpha$};
+    %     \draw [very thick,orange] (1,0) -- (intersection cs: first line={(O)--(B)},second line={(3,0)--(3,3)}) coordinate(B') node[midway,right]{$\tan\alpha$};
+    %     \draw (O) -- (B');
+    %     \draw[very thick,blue] (O) -- (Bx) node[midway,below]{$\cos\alpha$};
+    % \end{tikzpicture}
+    \begin{tikzpicture}[scale=2]
+        \draw[step=.5cm,gray,very thin] (-1.4,-1.4) grid (1.4,1.4);
+        \filldraw[fill=blue!20,draw=red] (0,0) -- (3mm,0mm)
+        arc [start angle=0, end angle=30, radius=3mm] -- cycle;
+        \node[red] at (15:2mm) {$\alpha$};
+        \draw[->] (-1.5,0) -- (1.5,0) coordinate (x axis)node[right]{$x$};
+        \draw[->] (0,-1.5) -- (0,1.5) coordinate (y axis)node[above]{$y$};
+        \draw (0,0) circle [radius=1cm];
+        \draw[very thick,orange]
+        (30:1cm) -- node[left=1pt,fill=white] {$\sin \alpha$} (30:1cm |- x axis);
+        \draw[very thick,blue]
+        (30:1cm |- x axis) -- node[below=2pt,fill=white] {$\cos \alpha$} (0,0);
+        \path [name path=upward line] (1,0) -- (1,1);
+        \path [name path=sloped line] (0,0) -- (30:1.5cm);
+        \draw [name intersections={of=upward line and sloped line, by=t}]
+        [very thick,red] (1,0) -- node [right=1pt,fill=white]
+        {$\displaystyle \tan \alpha$} (t);
+        \draw (0,0) -- (t);
+        \foreach \x/\xtext in {-1, -0.5/-\frac{1}{2}, 1}
+        \draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\xtext$};
+        \foreach \y/\ytext in {-1, -0.5/-\frac{1}{2}, 0.5/\frac{1}{2}, 1}
+        \draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\ytext$};
+    \end{tikzpicture}
+\end{figure}
+
+$y_B = \sin(\alpha) \qquad x_B = \cos(\alpha)$
+$\frac{y_B}{x_B} = \tan(\alpha)$
+
+Al variare dell'angolo $\alpha$, le funzioni vengono così rappresentate:
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[enlargelimits=false,
+                axis lines=middle,
+                scale=1.2,
+                xtick={-3.15159, -1.57080, 0,
+                        1.57080,  3.15159, 4.71239,
+                        6.28318,  7.85398, 9.42478 },
+                xticklabels={$-\pi$, $-\frac{1}{2}\pi$, 0,
+                        $\frac{1}{2}\pi$, $\pi$, $\frac{3}{2}\pi$,
+                        $2\pi$, $\frac{5}{2}\pi$, $3\pi$ },
+                ytick={-3,-2,-1,0,1,2,3},
+                grid=major, % only a grid on the defined ticks
+                samples=100 % number of points
+            ]
+
+            % sin
+            \addplot[blue,no marks,domain=-1.2*pi:3*pi]{sin(deg(x))}; % deg to convert radians
+            \node[right=10pt,above] at (axis cs:5*pi/2,1){\color{blue}$\sin(x)$};
+
+            % cos
+            \addplot[red,no marks,domain=-1.2*pi:3*pi] {cos(deg(x))};
+            \node[above left] at (axis cs:2*pi,1){\color{red}$\cos(x)$};
+
+            % tan, multiple parts because of singularities
+            \addplot[orange,no marks,domain=-1.2*pi:-0.583*pi, ]{tan(deg(x))};
+            \addplot[orange,no marks,domain=-0.4*pi:5*pi/12,   ]{tan(deg(x))};
+            \addplot[orange,no marks,domain=27*pi/45:17*pi/12, ]{tan(deg(x))};
+            \addplot[orange,no marks,domain=1.6*pi:29*pi/12,   ]{tan(deg(x))};
+            \addplot[orange,no marks,domain=2.6*pi:36*pi/12,   ]{tan(deg(x))};
+            \node[right] at (axis cs:pi/2,2.5){\color{orange}$\tan(x)$};
+
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
+
+Tutte queste funzioni sono periodiche, per cui $f(x) = f(x+T)$, dove $T$ è il periodo della funzione.
+
+Angoli noti:
+
+\begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|l|l|}
+        \hline
+        Angolo $^{\circ}$ & $\sin(\alpha)$        & $\cos(\alpha)$        & $\tan(\alpha)$       \\ \hline
+        0                 & 0                     & 1                     & 0                    \\ \hline
+        30                & $\frac{1}{2}$         & $\frac{\sqrt{3}}{2}$  & $\frac{1}{\sqrt{3}}$ \\ \hline
+        45                & $\frac{\sqrt{2}}{2} $ & $\frac{\sqrt{2}}{2} $ & $1$                  \\ \hline
+        60                & $\frac{\sqrt{3}}{2}$  & $\frac{1}{2}$         & $\sqrt{3}$           \\ \hline
+        90                & 1                     & 0                     & $\infty$             \\ \hline
+    \end{tabular}
+\end{table}
+
+Esistono poi le funzioni inverse, che permettono di trovare l'angolo $\alpha$ a partire da un dato valore della funzione (es. $\sin(30^{\circ}) = \frac{1}{2} \rightarrow 30^{\circ} = \arcsin(\frac{1}{2})$).
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}[enlargelimits=false,
+                axis lines=middle,
+                xtick={-2,-1,0,1,2},
+                ytick={-1.570780, 1.570780, 3.14159},
+                yticklabels={$-\frac{1}{2}\pi$,$\frac{1}{2}\pi$,$\pi$},
+                grid=major,
+                samples=100
+            ]
+
+            % arcsin
+            \addplot[domain=-1:1,no marks,blue] {rad(asin(x))};
+            \node at (axis cs:1.52,1.4){\color{blue}$\arcsin(x)$};
+
+            % arccos
+            \addplot[domain=-1:1,no marks,red] {rad(acos(x))};
+            \node at (axis cs:-1.5,2.8){\color{red}$\arccos(x)$};
+
+            % arctan
+            \addplot[domain=-2:2,no marks,orange] {rad(atan(x))};
+            \node at (axis cs:1.52,.67){\color{orange}$\arctan(x)$};
+
+        \end{axis}
+    \end{tikzpicture}
+\end{figure}
+
+Il periodo $T$ di una funzione si ricava come: $f(x)=\sin(\omega x) \rightarrow T=\frac{2\pi}{\omega}$
+
+Relazioni fondamentali della goniometria: $\sin(\alpha)^2 + \cos(\alpha)^2 = 0$ e $\frac{\sin(\alpha)}{\cos(\alpha)} = \tan(\\alpha)$
+
 \subsection{Funzioni goniometriche}
 
 \subsubsection*{Addizione}
@@ -52,3 +198,12 @@
 
 Ogni formula contenente la tangente ha le sue condizioni di esistenza.
 In generale essendo $\tan(\alpha)=\frac{\sin(\alpha)}{\cos(\alpha)}$ si ha che $\tan(\alpha)$ esiste se $\cos(\alpha)\neq0$, ovvero se $\alpha\neq K\pi$ con $K \in Z$.
+
+
+\subsection{Equazioni e disequazioni goniometriche}
+
+Esistono diversi tipologie di equazioni e/o disequazioni goniometriche. In particolare:
+
+\begin{itemize}
+    \item Elementari: sfruttano il principio degli angoli associati $\rightarrow \sin(x) = \frac{1}{2} \rightarrow x = \arcsin(\frac{1}{2}) \vel $
+\end{itemize}

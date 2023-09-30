@@ -44,6 +44,12 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+\hypersetup{
+  pdftitle={Personal CV},
+  pdfauthor={Tommaso Bocchietti},
+  pdfsubject={Curriculum Vitae},
+  pdfkeywords={}
+}
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
@@ -61,7 +67,7 @@
 \dateofbirth{March 1st, 2001}
 \homepage{www.bocchio.dev}
 \github{Bocchio01}
-\linkedin{tommaso-bocchietti-512366222}
+% \linkedin{tommaso-bocchietti-512366222}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -96,14 +102,16 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education.tex}
-\input{cv/skills.tex}
-\input{cv/experience.tex}
-\input{cv/extracurricular.tex}
-\input{cv/honors.tex}
-\input{cv/presentation.tex}
-% \input{cv/writing.tex}
-% \input{cv/committees.tex}
+\input{cv/education}
+\input{cv/skills}
+\input{cv/experience}
+\input{cv/extracurricular}
+\input{cv/honors}
+\input{cv/presentation}
+\input{cv/certifications}
+\input{cv/hobby}
+% \input{cv/writing}
+% \input{cv/committees}
 
 
 %-------------------------------------------------------------------------------

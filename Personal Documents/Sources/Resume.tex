@@ -26,7 +26,7 @@
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-orange}
+\colorlet{awesome}{awesome-red}
 % Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
 
@@ -44,43 +44,36 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
-\hypersetup{
-  pdftitle={Personal CV},
-  pdfauthor={Tommaso Bocchietti},
-  pdfsubject={Curriculum Vitae},
-  pdfkeywords={}
-}
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,noedge,left]{./Profile}
-\name{Tommaso}{Bocchietti}
-\position{Mechanical engineering student at Politecnico di Milano}
-% {\enskip\cdotp\enskip}Mapper at Orienteering Como}
-\address{Via Montagnola 13, San Fermo della Battaglia (CO, ITA)}
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Byungjin}{Park}
+\position{Software Architect{\enskip\cdotp\enskip}Security Expert}
+\address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
 
-\mobile{(+39) 342-501-6560}
-\email{tommaso.bocchietti@gmail.com}
-\dateofbirth{March 1st, 2001}
-\homepage{www.bocchio.dev}
-\github{Bocchio01}
-% \linkedin{tommaso-bocchietti-512366222}
+\mobile{(+82) 10-9030-1843}
+\email{posquit0.bj@gmail.com}
+%\dateofbirth{January 1st, 1970}
+\homepage{www.posquit0.com}
+\github{posquit0}
+\linkedin{posquit0}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
 % \skype{skype-id}
 % \reddit{reddit-id}
-% \medium{medium-id}
+% \medium{madium-id}
 % \kaggle{kaggle-id}
 % \googlescholar{googlescholar-id}{name-to-display}
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra information}
 
-\quote{``Get things done!''}
+\quote{``Be the change that you want to see in the world."}
 
 
 %-------------------------------------------------------------------------------
@@ -88,30 +81,28 @@
 
 % Print the header with above personal information
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[R]
+\makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
-{\today}
-{Tommaso Bocchietti~~~·~~~Curriculum Vitae}
-{\thepage}
+  {\today}
+  {Byungjin Park~~~·~~~Résumé}
+  {\thepage}
 
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education}
-\input{cv/skills}
-\input{cv/experience}
-\input{cv/extracurricular}
-\input{cv/honors}
-\input{cv/presentation}
-\input{cv/certifications}
-\input{cv/hobby}
-% \input{cv/writing}
-% \input{cv/committees}
+\input{resume/summary.tex}
+\input{resume/experience.tex}
+\input{resume/honors.tex}
+\input{resume/presentation.tex}
+\input{resume/writing.tex}
+\input{resume/committees.tex}
+\input{resume/education.tex}
+\input{resume/extracurricular.tex}
 
 
 %-------------------------------------------------------------------------------

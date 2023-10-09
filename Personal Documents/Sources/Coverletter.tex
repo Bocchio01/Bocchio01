@@ -1,13 +1,13 @@
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
-% Awesome CV LaTeX Template for CV/Resume
+% Awesome CV LaTeX Template for Cover Letter
 %
 % This template has been downloaded from:
 % https://github.com/posquit0/Awesome-CV
 %
-% Author:
+% Authors:
 % Claud D. Park <posquit0.bj@gmail.com>
-% http://www.posquit0.com
+% Lars Richter <mail@ayeks.de>
 %
 % Template license:
 % CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
@@ -45,9 +45,9 @@
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
 \hypersetup{
-  pdftitle={Personal CV},
+  pdftitle={PoliMi Sailing Team: Motivation Letter},
   pdfauthor={Tommaso Bocchietti},
-  pdfsubject={Curriculum Vitae},
+  pdfsubject={Motivation Letter},
   pdfkeywords={}
 }
 
@@ -59,7 +59,6 @@
 \photo[circle,noedge,left]{./Profile}
 \name{Tommaso}{Bocchietti}
 \position{Mechanical engineering student at Politecnico di Milano}
-% {\enskip\cdotp\enskip}Mapper at Orienteering Como}
 \address{Via Montagnola 13, San Fermo della Battaglia (CO, ITA)}
 
 \mobile{(+39) 342-501-6560}
@@ -84,6 +83,26 @@
 
 
 %-------------------------------------------------------------------------------
+%	LETTER INFORMATION
+%	All of the below lines must be filled out
+%-------------------------------------------------------------------------------
+% The company being applied to
+\recipient
+  {PoliMi Sailing Team}
+  {Via Giovanni Durando 10\\Milano 20158\\Italia}
+% The date on the letter, default is the date of compilation
+\letterdate{\today}
+% The title of the letter
+\lettertitle{Application for the PoliMi Sailing Team}
+% How the letter is opened
+\letteropening{Dear PoliMi Sailing Team,}
+% How the letter is closed
+\letterclosing{Sincerely,}
+% Any enclosures with the letter
+% \letterenclosure[Attached]{Curriculum Vitae}
+
+
+%-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal information
@@ -94,25 +113,43 @@
 % Leave any of these blank if they are not needed
 \makecvfooter
 {\today}
-{Tommaso Bocchietti~~~·~~~Curriculum Vitae}
-{\thepage}
+{Tommaso Bocchietti~~~·~~~Cover Letter}
+{}
+
+% Print the title with above letter information
+\makelettertitle
+
+%-------------------------------------------------------------------------------
+%	LETTER CONTENT
+%-------------------------------------------------------------------------------
+\begin{cvletter}
+
+  \lettersection{About Me}
+  I am a first-year Master's student in Mechanical Engineering at Politecnico di Milano, specializing in "Mechatronics and Robotics".\\
+  My academic journey has been driven by a profound passion for the fusion of mechanical engineering and computer science.\\
+  While I have mainly worked on solo projects, I am eager to collaborate with fellow students on challenging endeavors, making the PoliMi Sailing Team an ideal opportunity.
+
+  \lettersection{Why the PoliMi Sailing Team?}
+  While my personal enthusiasm for sailing is limited, I am deeply fascinated by the mechanical and mechatronic complexities of the team's project.
+  I am drawn to the idea of translating real-world phenomena into mathematical models to optimize the boat's mechanical systems for peak performance.
+  This synergy between technology and mechanical design is essential in pushing the boundaries of sailboat performance.\\
+  I am eager to collaborate with the team, ensuring the seamless integration of mechanical and mechatronic elements into the overall design.
+
+  \lettersection{Relevant Skills and Expertise}
+  My studies have provided me with a solid foundation in mechanical engineering, complemented by expertise in computer science and software development.
+  I am confident in my ability to contribute to the design, testing, and optimization of the innovative Moth prototype, particularly in control systems and performance enhancement.
+
+  \lettersection{Conclusion}
+  In conclusion, I am excited about the prospect of joining the PoliMi Sailing Team and contributing to the development of an innovative and sustainable Moth prototype.\\
+  My dedication, skills, and passion for engineering make me a valuable asset to the team.\\
+  I am eager to discuss my potential contributions further.
+
+\end{cvletter}
+
 
 
 %-------------------------------------------------------------------------------
-%	CV/RESUME CONTENT
-%	Each section is imported separately, open each file in turn to modify content
-%-------------------------------------------------------------------------------
-\input{cv/education}
-\input{cv/skills}
-\input{cv/experience}
-\input{cv/extracurricular}
-\input{cv/honors}
-\input{cv/presentation}
-\input{cv/certifications}
-\input{cv/hobby}
-% \input{cv/writing}
-% \input{cv/committees}
+% Print the signature and enclosures with above letter information
+\makeletterclosing
 
-
-%-------------------------------------------------------------------------------
 \end{document}

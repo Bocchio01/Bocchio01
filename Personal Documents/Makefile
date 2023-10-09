@@ -1,16 +1,17 @@
-.PHONY: generate clean
+.PHONY: CV Resume Coverletter clean
 
 CC = xelatex
 SRC_DIR = Sources
 OUT_DIR = Generated
-CV_DIR = Sources/cv
-CV_SRCS = $(shell find $(CV_DIR) -name '*.tex')
 
-# examples: $(foreach x, coverletter cv resume, $x.pdf)
-generate: $(foreach x, cv, $(OUT_DIR)/$x.pdf)
+CV: $(SRC_DIR)/CV.tex
+	$(CC) -output-directory=$(SRC_DIR) $<
 
-$(OUT_DIR)/cv.pdf: $(SRC_DIR)/cv.tex $(CV_SRCS)
+Resume: $(SRC_DIR)/Resume.tex
+	$(CC) -output-directory=$(SRC_DIR) $<
+
+Coverletter: $(SRC_DIR)/Coverletter.tex
 	$(CC) -output-directory=$(SRC_DIR) $<
 
 clean:
-	-rm -f $(SRC_DIR)/*.{aux,dvi,log,bbl,blg,brf,fls,toc,thm,out,fdb_latexmk}
+	rm $(SRC_DIR)/*.{aux,dvi,log,bbl,blg,brf,fls,toc,thm,out,fdb_latexmk}

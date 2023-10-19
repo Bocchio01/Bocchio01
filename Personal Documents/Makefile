@@ -1,17 +1,24 @@
 .PHONY: CV Resume Coverletter clean
 
 CC = xelatex
-SRC_DIR = Sources
-OUT_DIR = Generated
+SOURCE_DIR = Sources
+OUTPUT_DIR = Generated
 
-CV: $(SRC_DIR)/CV.tex
-	$(CC) -output-directory=$(SRC_DIR) $<
+all: CV Resume Coverletter clean
 
-Resume: $(SRC_DIR)/Resume.tex
-	$(CC) -output-directory=$(SRC_DIR) $<
+CV: $(SOURCE_DIR)/CV.tex
+	$(CC) -output-directory=$(OUTPUT_DIR) -include-directory=$(SOURCE_DIR)/ $<
 
-Coverletter: $(SRC_DIR)/Coverletter.tex
-	$(CC) -output-directory=$(SRC_DIR) $<
+Resume: $(SOURCE_DIR)/Resume.tex
+	$(CC) -output-directory=$(OUTPUT_DIR) -include-directory=$(SOURCE_DIR)/ $<
+
+Coverletter: $(SOURCE_DIR)/Coverletter.tex
+	$(CC) -output-directory=$(OUTPUT_DIR) -include-directory=$(SOURCE_DIR)/ $<
 
 clean:
-	rm $(SRC_DIR)/*.{aux,dvi,log,bbl,blg,brf,fls,toc,thm,out,fdb_latexmk}
+	del /Q $(OUTPUT_DIR)\*.aux
+	del /Q $(OUTPUT_DIR)\*.lof
+	del /Q $(OUTPUT_DIR)\*.log
+	del /Q $(OUTPUT_DIR)\*.lot
+	del /Q $(OUTPUT_DIR)\*.out
+	del /Q $(OUTPUT_DIR)\*.toc

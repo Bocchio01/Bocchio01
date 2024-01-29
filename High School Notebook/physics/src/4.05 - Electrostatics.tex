@@ -1,0 +1,222 @@
+% LTeX: language=it
+
+\section{Elettrostatica}
+
+L'elettrostatica studia le cariche elettriche stazionarie nel tempo.
+Gli elettroni hanno massa $m_e = \SI{9.109e-31}{\kilo\gram}$ e carica negativa.
+I protoni hanno massa $m_p = \SI{1.673e-27}{\kilo\gram}$ e carica positiva.
+La carica elementare equivale a $e = \SI{1.602e-19}{\coulomb}$.
+
+Un corpo si dice isolante se i suoi elettroni sono dissi e impossibilitati a muoversi, ma solo direzionarsi.
+É un conduttore se gli elettroni sono liberi di muoversi e spostarsi.
+
+\subsection{Legge di Coulomb}
+
+Per il calcolo della forza tra due cariche puntiformi si usa la legge di Coulomb:
+
+\begin{equation*}
+    F = k_0 \frac{Q_1 Q_2}{r^2}
+\end{equation*}
+
+Dove $k_0 = \frac{1}{4\pi\varepsilon_0}$, con $\varepsilon_0 = \text{Costante dielettrica del vuoto} = \SI{8.854e-12}{\coulomb\squared\per\newton\per\meter\squared}$.
+
+I materiali si possono caricare per strofinio, contatto o induzione. Gli isolanti, o dielettrici, si possono solo polarizzare (polarizzazione).
+
+Costante dielettrica relativa $\varepsilon = \varepsilon_r \varepsilon_0$.
+
+\subsection{Il campo elettrico}
+
+Un campo vettoriale è una funzione che associa a ogni punto dello spazio, un vettore che specifica in modulo, direzione e verso, una data grandezza vettoriale.
+
+Forza generata da un campo elettrico:
+
+\begin{equation*}
+    \vec{F} = q \vec{E} \rightarrow \SI{}{\newton} = \SI{}{\coulomb} \cdot \frac{\SI{}{\newton}}{\SI{}{\coulomb}}
+\end{equation*}
+
+Dove $q = \text{carica di prova}$.
+
+Rappresentazione grafica:
+
+% TODO: carica elettrica con linee di campo
+% TODO: dipolo elettrico con linee di campo
+
+\subsection{Flusso del campo elettrico / Teorema di Gauss}
+
+\begin{align*}
+    \text{Per superfici aperte}: & \Phi_S(\vec{E}) = \int_S \vec{E} \cdot \vec{S} \, dS = \sum_{i = 1}^{N} \vec{E_i} \cdot \vec{\Delta S_i}            \\
+    \text{Per superfici chiuse}: & \Phi_\Omega(\vec{E}) = \frac{Q_{tot}}{\varepsilon}, \text{con } Q_{tot} = \text{carica totale contenuta in } \Omega
+\end{align*}
+
+% TODO: esempio di superficie aperta
+% TODO: esempio di superficie chiusa con carica interna
+
+\subsection{Forme di campo elettrico in casi noti}
+
+Ipotizzando di essere nel vuoto, e quindi di avere $\varepsilon = \varepsilon_0$, possiamo dare la definizione di $\vec{E}$ per alcuni casi particolari.
+
+\begin{itemize}
+    \item Carica puntiforme: $\vec{E} = k_0 \frac{Q}{r^2} \hat{r}$
+    \item Piano infinito uniformemente carico: $\vec{E} = \frac{\sigma}{2\varepsilon_0} \hat{n}$, con $\sigma = \text{densità di carica superficiale} \SI{}{\coulomb\per\meter\squared}$
+    \item Filo infinito uniformemente carico: $\vec{E} = \frac{\lambda}{2\pi\varepsilon_0 r} \hat{r}$, con $\lambda = \text{densità di carica lineare} \SI{}{\coulomb\per\meter}$ e $r = \text{distanza dal filo}$
+    \item Una sfera, al suo esterno: $\vec{E} = k_0 \frac{Q}{r^2} \hat{r}$ (essenzialmente una carica puntiforme)
+    \item Una sfera conduttrice, al suo interno: $\vec{E} = 0$ perché le cariche si distribuiscono sulla superficie
+    \item Una sfera dielettrica, al suo interno: $\vec{E} = r \cdot k_0 \frac{Q}{R^3} \hat{r}$, con $Q = \text{carica compresa nel volume di raggio} r$
+    \item In un condensatore piano: $\vec{E} = \frac{\sigma}{\varepsilon_0}$. All'esterno delle barriere, $\vec{E} = 0$
+\end{itemize}
+
+\subsection{Energia potenziale elettrica}
+
+L'energia potenziale elettrica tra due cariche puntiformi è:
+
+\begin{equation*}
+    U = k_0 \frac{Q_1 Q_2}{r}
+\end{equation*}
+
+% TODO: grafico dell'energia potenziale elettrica caso >0 e caso <0
+
+In generale: $U = L = \vec{F} \cdot \vec{s} = q \vec{E} \cdot \text{distanza dalla fonte di campo}$
+
+\subsection{Potenziale elettrico}
+
+Il potenziale elettrico è una funzione scalare che associa a ogni punto dello spazio un valore scalare che specifica l'energia potenziale elettrica di una carica di prova $q$ in quel punto.
+
+\begin{equation*}
+    V = \frac{U}{q} = \frac{L}{q} = \frac{\vec{F} \cdot \vec{s}}{q} = \vec{E} \cdot \vec{s}
+\end{equation*}
+
+In generale, definito $\Delta V = V_B - V_A$ differenza di potenziale, si ha:
+
+\begin{equation*}
+    \Delta V = -\vec{E} \cdot \Delta \vec{s} \rightarrow L = U_A - U_B = - q \Delta V
+\end{equation*}
+
+Partendo quindi da $U_{A \rightarrow B} = -q \Delta V = -q (V_B - V_A)$, abbiamo che il lavoro è positivo, e quindi le cariche si spostano autonomamente, se la carica $q$ è:
+
+\begin{itemize}
+    \item Positiva, e allora passa da potenziale maggiore a potenziale minore $\rightarrow$ $V_A > V_B$
+    \item Negativa, e allora passa da potenziale minore a potenziale maggiore $\rightarrow$ $V_A < V_B$
+\end{itemize}
+
+% TODO: schemino di una carica immersa in un campo elettrico con valutazioni su V U e L
+
+Una superficie equipotenziale è il luogo dei punti dello spazio aventi lo stesso potenziale elettrico.
+
+Un esempio è il condensatore piano, che forma tra le sue armature una serie di superfici equipotenziali.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+
+        % Draw walls
+        \draw[line width=2mm] (0,0) -- (0,3);
+        \draw[line width=2mm] (5,0) -- (5,3);
+
+        % Draw electric field lines
+        \foreach \y in {0.5,1.5,2.5}
+        \draw[postaction={
+                    decorate,
+                    decoration={
+                            markings,
+                            mark=between positions 0.2 and 1 step 1.5cm with {\arrow{latex}}
+                        }}] (0,\y) -- (4.9,\y);
+
+        % Draw equipotential lines
+        \foreach \x in {1.5,3.5}
+        \draw[dashed, color=red] (\x, 0) -- (\x,3);
+
+        % Draw equipotential lines
+        \foreach \y in {0.5,1,...,2.5}
+            {
+                \node at (-0.5,\y) {+};
+                \node at ( 5.5,\y) {-};
+            }
+    \end{tikzpicture}
+    \caption{Condensatore piano con \textcolor{red}{superfici equipotenziali}}
+\end{figure}
+
+\subsection{Circuitazione del campo elettrico lungo una linea chiusa orientata}
+
+É una legge che serve per dimostrare che il campo elettrico $\vec{E}$, rimane costante ed è quindi conservativo.
+
+\begin{equation*}
+    \oint_\mathcal{L} \vec{E} = \sum_{i = 1}^{n} \vec{E} \cdot \vec{\Delta s_i}
+\end{equation*}
+
+Visto che il campo elettrico è conservativo, deve valere che $\oint_\mathcal{L} \vec{E} = 0$ sempre, ammesso che la linea $\mathcal{L}$ sia chiusa.
+
+\subsection{Distribuzione delle cariche nei conduttori}
+
+Le cariche tendono sempre a mettersi sulle superfici esterne.
+L'interno dunque di un conduttore rimane con $\vec{E} = 0$, e $V_{interna} = V_{superficie}$ e dunque $\Delta V = 0$.
+
+Il potere delle punte è un fenomeno correlato alla distribuzione delle cariche sui conduttori per cui si ha $S_{punta} \approx 0$ e quindi $\vec{E} = \frac{Q}{S\varepsilon} = \infty$.
+Da questo ne deriva che alcuni cariche possono essere espulse dal conduttore generando così un vento elettrico.
+
+\subsection{Teorema di Coulomb}
+
+Per calcolare il campo elettrico sulla superficie di un conduttore si ha $\vec{E} = \frac{\sigma}{\varepsilon}$
+
+% TODO: disegno conduttore con superficie elettrizzata
+
+\subsection{Capacità di un condensatore}
+
+É definita come il rapporto tra la carica elettrica e il potenziale elettrico:
+
+\begin{equation*}
+    C = \frac{Q}{V} \SI{}{\farad} = \SI{}{\coulomb\per\volt}
+\end{equation*}
+
+Corrisponde alla quantità di carica che può contenere un conduttore.
+
+\begin{itemize}
+    \item Per una sfera conduttrice: $C = 4\pi\varepsilon_0 R$
+    \item Per un condensatore piano: $C = \varepsilon_0 \frac{S}{d}$, con $S = \text{superficie delle armature}$ e $d = \text{distanza tra le armature}$
+\end{itemize}
+
+\subsection{Energia immagazzinata in un condensatore}
+
+Corrisponde al lavoro compiuto per caricare il condensatore
+
+\begin{equation*}
+    W_c = \frac{1}{2} \frac{Q^2}{C} = \frac{1}{2} C V \SI{}{\joule}
+\end{equation*}
+
+\subsection{Densità di energia in un condensatore}
+
+É il rapporto tra l'energia immagazzinata e il volume del condensatore tra le pareti.
+
+\begin{equation*}
+    w_{\vec{E}} = \frac{W_c}{Sd} = \frac{1}{2} \varepsilon_0 E^2 \SI{}{\joule\per\meter\cubed}
+\end{equation*}
+
+\subsection{Proprietà fondamentali del campo elettrico}
+
+Si riportano qui le due proprietà fondamentali del campo elettrico:
+
+\begin{itemize}
+    \item Flusso del campo elettrico da una superficie chiusa: $\Phi_\Omega(\vec{E}) = \frac{Q_{tot}}{\varepsilon}$
+    \item Circuitazione del campo elettrico lungo una linea chiusa orientata: $\oint_\mathcal{L} \vec{E} = 0$
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

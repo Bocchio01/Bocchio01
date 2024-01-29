@@ -15,13 +15,14 @@ Physics: $(SOURCE_DIR_PHYSICS)/Physics.tex
 	cd $(SOURCE_DIR_PHYSICS)
 	$(CC) -output-directory=$(OUTPUT_DIR) -include-directory=$(SOURCE_DIR_PHYSICS)/ $<
 
+
+# del /Q $(OUTPUT_DIR)*.toc
 clean:
 	del /Q $(OUTPUT_DIR)*.aux
 	del /Q $(OUTPUT_DIR)*.lof
 	del /Q $(OUTPUT_DIR)*.log
 	del /Q $(OUTPUT_DIR)*.lot
 	del /Q $(OUTPUT_DIR)*.out
-	del /Q $(OUTPUT_DIR)*.toc
 	del /Q $(OUTPUT_DIR)*.fls
 	del /Q $(OUTPUT_DIR)*.fdb_latexmk
 	del /Q $(OUTPUT_DIR)*.synctex.gz

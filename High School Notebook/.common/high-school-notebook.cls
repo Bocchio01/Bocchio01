@@ -12,9 +12,11 @@
 \RequirePackage{graphicx}
 \RequirePackage{float}
 \RequirePackage{amsfonts}
+\RequirePackage{siunitx}
+\RequirePackage[dvipsnames]{xcolor}
 
-% \pgfplotsset{compat=1.18}
-\usetikzlibrary{intersections}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{intersections,calc,patterns,angles,quotes,decorations.markings}
 
 
 \setlength{\parindent}{0pt}

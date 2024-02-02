@@ -5,3 +5,5 @@ circuitazione
 Minkowski
 spazio-tempo
 Lorentz
+Lenz
+Foucault

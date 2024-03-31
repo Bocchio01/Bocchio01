@@ -20,7 +20,7 @@ Currently I'm attending the _MSc Robotics and Mechatronic_ course at @Politecnic
 
 </br> -->
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Bocchio01&show_icons=true&title_color=ffa500&bg_color=000000&text_color=ffffff&exclude_repo=Personal_web_site&langs_count=4&layout=compact&card_width=430" />
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Bocchio01&show_icons=true&title_color=ffa500&bg_color=000000&text_color=ffffff&exclude_repo=Personal_web_site&langs_count=4&layout=compact&card_width=430&hide=TeX,Mathematica" />
 
 </div>
 

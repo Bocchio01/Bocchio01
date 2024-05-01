@@ -20,6 +20,9 @@
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 
+\usepackage{float}
+\usepackage{overpic}
+
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
@@ -62,12 +65,12 @@
 % {\enskip\cdotp\enskip}Mapper at Orienteering Como}
 \address{Via Montagnola 13, San Fermo della Battaglia (CO, ITA)}
 
-\mobile{(+39) 342-501-6560}
 \email{tommaso.bocchietti@gmail.com}
-\dateofbirth{March 1st, 2001}
-\homepage{www.bocchio.dev}
+\mobile{(+39) 342-501-6560}
 \github{Bocchio01}
+\homepage{www.bocchio.dev}
 % \linkedin{tommaso-bocchietti}
+% \dateofbirth{March 1st, 2001}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
@@ -102,16 +105,19 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education}
-\input{cv/skills}
-\input{cv/experience}
-\input{cv/extracurricular}
-\input{cv/honors}
-\input{cv/presentation}
-\input{cv/certifications}
-\input{cv/hobby}
-% \input{cv/writing}
-% \input{cv/committees}
+\input{cv/education.tex}
+\input{cv/skills.tex}
+\input{cv/experience.tex}
+\input{cv/extracurricular.tex}
+\input{cv/honors.tex}
+% \input{cv/presentation.tex}
+\input{cv/certifications.tex}
+\input{cv/hobby.tex}
+
+\clearpage
+\input{cv/projects.tex}
+% \input{cv/writing.tex}
+% \input{cv/committees.tex}
 
 
 %-------------------------------------------------------------------------------

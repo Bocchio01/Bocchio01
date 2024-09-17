@@ -20,13 +20,18 @@
 % A4 paper size by default, use 'letterpaper' for US letter
 \documentclass[11pt, a4paper]{awesome-cv}
 
+\usepackage{float}
+\usepackage{overpic}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
 
 % Color for highlights
 % Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
 %                 awesome-nephritis, awesome-concrete, awesome-darknight
-\colorlet{awesome}{awesome-red}
+\colorlet{awesome}{awesome-orange}
 % Uncomment if you would like to specify your own color
 % \definecolor{awesome}{HTML}{CA63A8}
 
@@ -44,37 +49,55 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+\hypersetup{
+  pdftitle={Personal Résumé},
+  pdfauthor={Tommaso Bocchietti},
+  pdfsubject={Résumé},
+  pdfkeywords={}
+}
 
 %-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo[rectangle,edge,right]{./examples/profile}
-\name{Byungjin}{Park}
-\position{Software Architect{\enskip\cdotp\enskip}Security Expert}
-\address{42-8, Bangbae-ro 15-gil, Seocho-gu, Seoul, 00681, Rep. of KOREA}
+% \photo[circle,noedge,left]{common/img/Profile}
+\name{Tommaso}{Bocchietti}
+\position{Junior Mechanical Engineer}
+\address{Via Montagnola 13, San Fermo della Battaglia, Como (IT)}
 
-\mobile{(+82) 10-9030-1843}
-\email{posquit0.bj@gmail.com}
-%\dateofbirth{January 1st, 1970}
-\homepage{www.posquit0.com}
-\github{posquit0}
-\linkedin{posquit0}
+\email{tommaso.bocchietti@gmail.com}
+\mobile{(+39) 342-501-6560}
+\github{Bocchio01}
+\homepage{www.bocchio.dev}
+\linkedin{tommaso-bocchietti}
+% \dateofbirth{March 1st, 2001}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
 % \twitter{@twit}
 % \skype{skype-id}
 % \reddit{reddit-id}
-% \medium{madium-id}
+% \medium{medium-id}
 % \kaggle{kaggle-id}
 % \googlescholar{googlescholar-id}{name-to-display}
 %% \firstname and \lastname will be used
 % \googlescholar{googlescholar-id}{}
 % \extrainfo{extra information}
 
-\quote{``Be the change that you want to see in the world."}
+\quote{``Get things done!''}
 
+\newcommand{\companyname}{\textbf{Whom It May Concern} }
+\newcommand{\stars}[2][fill=darktext,draw=darktext]{
+\begin{tikzpicture}[baseline=-0.34em,#1]
+\foreach \X in {1,...,5}
+{
+\pgfmathsetmacro{\xfill}{min(1,max(1+#2-\X,0))}
+\path (\X*1em,0)
+node[star,draw, ultra thin,star point height=0.23em,minimum size=0.75em,inner sep=0pt,
+path picture={\fill (path picture bounding box.south west)
+rectangle  ([xshift=\xfill*0.722em]path picture bounding box.north west);}]{};
+}
+\end{tikzpicture}}
 
 %-------------------------------------------------------------------------------
 \begin{document}
@@ -86,24 +109,25 @@
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
 \makecvfooter
-  {\today}
-  {Byungjin Park~~~·~~~Résumé}
-  {\thepage}
+{\today}
+{Tommaso Bocchietti~~~·~~~Résumé}
+{\thepage}
 
 
 %-------------------------------------------------------------------------------
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{resume/summary.tex}
-\input{resume/experience.tex}
-\input{resume/honors.tex}
-\input{resume/presentation.tex}
-\input{resume/writing.tex}
-\input{resume/committees.tex}
-\input{resume/education.tex}
-\input{resume/extracurricular.tex}
+\input{common/summary.tex}
 
+\input{resume/experience.tex}
+\input{resume/education.tex}
+\input{common/skills_and_langs.tex}
+
+\clearpage
+\input{resume/projects.tex}
+
+\input{common/signature.tex}
 
 %-------------------------------------------------------------------------------
 \end{document}

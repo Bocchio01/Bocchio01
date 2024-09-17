@@ -22,6 +22,8 @@
 
 \usepackage{float}
 \usepackage{overpic}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
 
 % Configure page margins with geometry
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
@@ -59,17 +61,16 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-\photo[circle,noedge,left]{img/Profile}
+% \photo[circle,noedge,left]{common/img/Profile}
 \name{Tommaso}{Bocchietti}
-\position{Mechanical engineering student at Politecnico di Milano}
-% {\enskip\cdotp\enskip}Mapper at Orienteering Como}
-\address{Via Montagnola 13, San Fermo della Battaglia (CO, ITA)}
+\position{Junior Mechanical Engineer}
+\address{Via Montagnola 13, San Fermo della Battaglia, Como (IT)}
 
 \email{tommaso.bocchietti@gmail.com}
 \mobile{(+39) 342-501-6560}
 \github{Bocchio01}
 \homepage{www.bocchio.dev}
-% \linkedin{tommaso-bocchietti}
+\linkedin{tommaso-bocchietti}
 % \dateofbirth{March 1st, 2001}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
@@ -85,13 +86,25 @@
 
 \quote{``Get things done!''}
 
+\newcommand{\companyname}{\textbf{Whom It May Concern} }
+\newcommand{\stars}[2][fill=darktext,draw=darktext]{
+\begin{tikzpicture}[baseline=-0.34em,#1]
+\foreach \X in {1,...,5}
+{
+\pgfmathsetmacro{\xfill}{min(1,max(1+#2-\X,0))}
+\path (\X*1em,0)
+node[star,draw, ultra thin,star point height=0.23em,minimum size=0.75em,inner sep=0pt,
+path picture={\fill (path picture bounding box.south west)
+rectangle  ([xshift=\xfill*0.722em]path picture bounding box.north west);}]{};
+}
+\end{tikzpicture}}
 
 %-------------------------------------------------------------------------------
 \begin{document}
 
 % Print the header with above personal information
 % Give optional argument to change alignment(C: center, L: left, R: right)
-\makecvheader[R]
+\makecvheader[C]
 
 % Print the footer with 3 arguments(<left>, <center>, <right>)
 % Leave any of these blank if they are not needed
@@ -105,20 +118,19 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/education.tex}
-\input{cv/skills.tex}
+\input{common/summary.tex}
+
 \input{cv/experience.tex}
+\input{cv/education.tex}
+\input{common/skills_and_langs.tex}
 \input{cv/extracurricular.tex}
 \input{cv/honors.tex}
-% \input{cv/presentation.tex}
+\input{cv/presentation.tex}
 \input{cv/certifications.tex}
-\input{cv/hobby.tex}
-
-\clearpage
+\input{common/hobby.tex}
 \input{cv/projects.tex}
-% \input{cv/writing.tex}
-% \input{cv/committees.tex}
 
+\input{common/signature.tex}
 
 %-------------------------------------------------------------------------------
 \end{document}

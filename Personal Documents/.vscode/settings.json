@@ -1,0 +1,6 @@
+{
+    "latex-workshop.latex.outDir": "%DIR%/../Generated",
+    "editor.insertSpaces": true,
+    "editor.tabSize": 4,
+    "editor.detectIndentation": false,
+}

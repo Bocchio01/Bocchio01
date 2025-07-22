@@ -3,13 +3,15 @@
 Here is Tommaso, a passionate coder and robotics enthusiast.
 I hold a Bachelor's degree in Mechanical Engineering (@Politecnico_di_Milano) and I'm just about to complete my Master's degree in Robotics and Mechatronics at the same university.
 
-**I do love model-based approach, control theory and embedded systems.**
+<div align="center" style="font-size: 1.1em; margin: 1em;">
+<b>I love model-based approach, control theory and embedded systems.</b>
+</div>
 
 While university gave me a solid theoretical background on the first two topics, I had the chance to explore the latter working on several personal projects.
 The joy of seeing a low-level code running on a microcontroller, making a robot move, is something I will never get tired of.
 
 
-## Programming stack
+## Technical skills
 
 I'm proficient in *MATLAB/Simulink*, *C/C++*, *Python*, and the *Robot Operating System (ROS)*, with hands-on experience across their ecosystems, toolchains, and widely used libraries.
 In addition, I have a solid understanding of modern web development.

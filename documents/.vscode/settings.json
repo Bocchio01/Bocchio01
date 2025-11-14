@@ -1,6 +1,12 @@
 {
     "latex-workshop.latex.outDir": "%DIR%/../Generated",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 4,
-    "editor.detectIndentation": false,
+    "latex-workshop.latex.recipe.default": "first",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk (xelatex)",
+            "tools": [
+                "xelatexmk"
+            ]
+        }
+    ]
 }

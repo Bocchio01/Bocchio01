@@ -53,7 +53,7 @@
   pdftitle={Personal CV},
   pdfauthor={Tommaso Bocchietti},
   pdfsubject={Curriculum Vitae},
-  pdfkeywords={}
+  pdfkeywords={Mechanical Engineer, Mechatronics, Robotics, CV, Resume}
 }
 
 %-------------------------------------------------------------------------------
@@ -119,16 +119,20 @@ rectangle  ([xshift=\xfill*0.722em]path picture bounding box.north west);}]{};
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
+\newcommand{\IsCV}{1}
+
 \input{common/summary.tex}
 
 \input{cv/experience.tex}
+
+\clearpage
 \input{cv/education.tex}
 \input{common/skills_and_langs.tex}
 \input{cv/extracurricular.tex}
 \input{cv/honors.tex}
 \input{cv/presentation.tex}
 \input{cv/certifications.tex}
-\input{common/hobby.tex}
+\input{cv/hobby.tex}
 
 \clearpage
 \input{cv/projects.tex}

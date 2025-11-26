@@ -8,5 +8,6 @@
                 "xelatexmk"
             ]
         }
-    ]
+    ],
+    "editor.wordWrap": "on"
 }

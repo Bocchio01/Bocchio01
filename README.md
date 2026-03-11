@@ -1,7 +1,7 @@
 # Welcome :panda_face:!
 
-Here is Tommaso, a passionate coder and robotics enthusiast.
-I hold a Bachelor's degree in Mechanical Engineering (@Politecnico_di_Milano) and I'm just about to complete my Master's degree in Robotics and Mechatronics at the same university.
+Here is Tommaso, a passionate coder and mechatronics enthusiast.
+I hold a Bachelor's degree in Mechanical Engineering (@Politecnico-di-Milano) and recently completed my Master's degree in Robotics and Mechatronics at the same university.
 
 <div align="center">
 
@@ -20,8 +20,9 @@ The joy of seeing a low-level code running on a microcontroller, making a robot 
 I'm proficient in *MATLAB/Simulink*, *C/C++*, *Python*, and the *Robot Operating System (ROS)*, with hands-on experience across their ecosystems, toolchains, and widely used libraries.
 In addition, I have a solid understanding of modern web development.
 
-On the hardware side, I'm comfortable working with embedded systems (as long as the electronics aren't faulty out of the box :( ).
-I have practical experience with the *Arduino* family, *Raspberry Pi*, and *STM32* microcontrollers, as well as a wide range of commonly used sensors and actuators in robotics applications.
+On the hardware side, I'm comfortable working with embedded systems and I have practical experience with the *Arduino* family, *Raspberry Pi*, and *STM32* microcontrollers, as well as a wide range of commonly used sensors and actuators in robotics applications.
+
+As a mechanical engineer, I'm experienced with *CAD tools* like *CATIA V5*, *SolidWorks*, and *Inventor* for designing mechanical systems, along with *COMSOL* and other simulation tools for FEA, CFD, and multiphysics analysis.
 
 
 ## Explore around
@@ -35,7 +36,7 @@ I try to keep my projects organized and documented, for this reason you can find
 
 <div align="center">
 
-<img src="maglev_project_showcase.png" alt="Maglev Project Showcase" width="800px" />
+<img src="maglev-project-showcase.png" alt="Maglev Project Showcase" width="800px" />
 
 </div>
 
@@ -44,8 +45,8 @@ I try to keep my projects organized and documented, for this reason you can find
 
 ## Get in touch
 
-Sometimes I feel I've already to many ideas and projects on my own, but I'm always open to new opportunities and collaborations.
-If you have an interesting project in mind, or if you just want to chat about robotics, feel free to reach out to me via [email](mailto:tommaso.bocchietti@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/tommaso-bocchietti/).
+I'm always open to new opportunities and collaborations.
+If you have an interesting project in mind, feel free to reach out to me via [email](mailto:tommaso.bocchietti@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/tommaso-bocchietti/).
 
 Have a nice coding day,
 

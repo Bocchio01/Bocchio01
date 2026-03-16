@@ -12,7 +12,7 @@ I hold a Bachelor's degree in Mechanical Engineering (@Politecnico-di-Milano) an
 </div>
 
 While university gave me a solid theoretical background on the first two topics, I had the chance to explore the latter working on several personal projects.
-The joy of seeing a low-level code running on a microcontroller, making a robot move, is something I will never get tired of.
+I see myself as a hands-on engineer, hoping in the future I will be able to apply my control background to the emerging large-scale applications of superconducting magnet technologies.
 
 
 ## Technical skills

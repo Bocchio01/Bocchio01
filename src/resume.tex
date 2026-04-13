@@ -61,17 +61,17 @@
 %	Comment any of the lines below if they are not required
 %-------------------------------------------------------------------------------
 % Available options: circle|rectangle,edge/noedge,left/right
-% \photo[circle,noedge,left]{common/img/Profile}
+% \photo[circle,noedge,left]{common/profile.png}
 \name{Tommaso}{Bocchietti}
 \position{MSc Mechatronics \& Robotics | Mechanical Engineer}
 \address{San Fermo della Battaglia, Como (IT)}
 % \address{Gilching, Munich Metropolitan Area (DE)}
 
-\email{tommaso.bocchietti@gmail.com}
+\email{tommaso.bocchietti@mail.polimi.it}
 \mobile{(+39) 342-501-6560}
 \github{Bocchio01}
 \homepage{bocchio.dev}
-\linkedin{tommaso-bocchietti}
+% \linkedin{tommaso-bocchietti}
 % \dateofbirth{March 1st, 2001}
 % \gitlab{gitlab-id}
 % \stackoverflow{SO-id}{SO-name}
@@ -106,6 +106,10 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
+% \newcommand{\IsMechanical}{1}
+% \newcommand{\IsMechatronics}{1}
+\newcommand{\IsSuperconductivity}{1}
+
 \vspace{9pt}
 \input{common/summary.tex}
 \vspace{9pt}
@@ -114,5 +118,6 @@
 \input{resume/education.tex}
 \input{common/skills-and-langs.tex}
 \input{resume/projects.tex}
+\input{common/hobby.tex}
 %-------------------------------------------------------------------------------
 \end{document}

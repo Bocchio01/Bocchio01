@@ -6,25 +6,71 @@
 
     \begin{cvskills}
 
-        \cvskill
-        {Robotics}
-        {ROS, MATLAB/Simulink, Model-Based Design, Feedback Control Systems}
+        \ifdefined\IsMechanical
+            \cvskill
+            {Mechanical}
+            {CATIA V5, Altair HyperWorks, COMSOL, ANSYS, SolidWorks, Inventor}
 
-        \cvskill
-        {Embedded}
-        {STM32, ESP32, Raspberry Pi, Arduino, Sensors \& Actuators}
+            \cvskill
+            {Software}
+            {C/C++, Python, Java, Web Stack (JS, PHP, MySQL)}
 
-        \cvskill
-        {Mechanical}
-        {CATIA V5, SolidWorks, COMSOL, Inventor}
+            \cvskill
+            {Embedded}
+            {STM32, ESP32, Raspberry Pi, Arduino, Sensors \& Actuators}
 
-        \cvskill
-        {Software}
-        {C/C++, Python, Java, Web Stack (JS, PHP, MySQL)}
+            \cvskill
+            {Robotics}
+            {ROS, MATLAB/Simulink, Model-Based Design, Feedback Control Systems}
 
-        \cvskill
-        {Tools}
-        {Git, CI/CD, Latex, Linux, Windows}
+            \cvskill
+            {Tools}
+            {Git, CI/CD, Latex, Linux, Windows, 3D Printing}
+        \fi
+
+        \ifdefined\IsMechatronics
+            \cvskill
+            {Control}
+            {Model-Based Design, Linear \& Nonlinear Feedback Control, State Estimation}
+
+            \cvskill
+            {Embedded}
+            {STM32, ESP32, Raspberry Pi, Arduino, CAN bus}
+
+            \cvskill
+            {Lab \& Test}
+            {Sensors \& Actuators, Multimeters, DAQ Systems, Hardware Commissioning}
+
+            \cvskill
+            {Software}
+            {MATLAB/Simulink, C/C++, Python, Git, Linux, ROS}
+
+            \cvskill
+            {Mechanical}
+            {CATIA V5, FEM Analysis, Rapid Prototyping, 3D Printing}
+        \fi
+
+        \ifdefined\IsSuperconductivity
+            \cvskill
+            {Mechanical}
+            {CATIA V5, Altair HyperWorks, COMSOL, ANSYS, SolidWorks, Inventor}
+
+            \cvskill
+            {Software}
+            {C/C++, Python, Java, Web Stack (JS, PHP, MySQL)}
+
+            \cvskill
+            {Embedded}
+            {STM32, ESP32, Raspberry Pi, Arduino, Sensors \& Actuators}
+
+            \cvskill
+            {Robotics}
+            {ROS, MATLAB/Simulink, Model-Based Design, Feedback Control Systems}
+
+            \cvskill
+            {Tools}
+            {Git, CI/CD, Latex, Linux, Windows, 3D Printing}
+        \fi
 
     \end{cvskills}
 
@@ -49,10 +95,6 @@
         \cvskill
         {French}
         {A1 / Beginner}
-
-        \cvskill
-        {German}
-        {A1 / Beginner (Early level)}
 
     \end{cvskills}
 

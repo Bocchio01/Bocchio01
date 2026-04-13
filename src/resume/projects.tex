@@ -1,63 +1,60 @@
 \cvsection{Projects}
 
 \descriptionstyle{
-    Selection (not exhaustive) of some projects I've worked on that relate to my academic, professional, and personal interests.\\
-    I consider them as way to experiment, learn, and get a hands-on approach to engineering.
+    Selected projects that I have worked on, I consider them as way to experiment, learn, and get a hands-on approach to engineering.
+    For a more comprehensive list of projects, please visit my \href{https://bocchio.dev/projects}{personal website}.
 }
 
 \begin{cventries}
 
-    %---------------------------------------------------------
-    \cventry
-    {Master thesis and competitive team project}
-    {Professional \& Research Projects}
-    {DLR (DE) \& Politecnico di Milano (IT)}
-    {Oct 2023 - Dec 2025}
-    {
-        \begin{cvitems}
-            \item {\textbf{Regrasping Framework for Robotic Manipulation}: developed multi-stage regrasping algorithms achieving \textbf{33\% higher success rate} compared to baseline methods. Built calibrated digital twin in \textbf{PyBullet}, implemented simulation-to-deployment pipeline with \textbf{ROS-based architecture} for DLR lightweight robotic arm.}
-            \item {\textbf{Marine Electronics for Competitive Sailing}: designed distributed sensor network with \textbf{NMEA protocol} integration, developed embedded firmware for \textbf{STM32/ESP32} microcontrollers managing \textbf{CAN bus} communication and actuation. Team achieved Overall Win at 2024 SuMoth competition (1st of 11 teams).}
-            \item {\textbf{Electric Personal Mobility Vehicle Concept Design (RIMAC competition)}: conducted systematic design methodology from market research through \textbf{FEM analysis} and \textbf{FMEA}. Team selected as winning concept by RIMAC Automobili engineers among 4 European universities.}
-        \end{cvitems}
-    }
+    \ifdefined\IsMechanical
+        %---------------------------------------------------------
+        \input{common/projects/topology-hub.tex}
 
-    %---------------------------------------------------------
-    \cventry
-    {Independent projects for hands-on learning and experimentation}
-    {Personal Projects}
-    {Personal Workshop, Como (IT)}
-    {Jul 2023 - Present}
-    {
-        \begin{cvitems}
-            \item {\textbf{Self-Driving RC Car}: modular \textbf{ROS 2} stack with trajectory following, command arbitration, and \textbf{LiDAR-based SLAM}. Low-level \textbf{C++} firmware supporting multiple kinematic models (\textbf{Ackermann \& Differential}) on microcontroller with \textbf{Raspberry Pi} high-level control.}
-            \item {\textbf{Model Rocket with CFD Optimization}: complete design-to-flight project with iterative \textbf{CFD} simulations achieving \textbf{$C_D \approx 0.806$}. Custom flight computer ($< 20cm^3$) with barometric/acceleration sensors, parachute deployment. Successfully launched to \textbf{538m altitude}, \textbf{120m/s velocity}, validating predictions.}
-            \item {\textbf{CNC Plotter with Edge Detection}: \textbf{Arduino-based} motion control with \textbf{Canny edge detection} algorithm for image-to-sketch conversion. Recycled DVD drive actuators with path planning optimization.}
-            \item {\textbf{Adjustable Bench Power Supply}: CAD-designed 3D printed enclosure, diode bridge rectification with smoothing capacitors, adjustable voltage/current regulation, and built-in digital multimeter display.}
-        \end{cvitems}
-    }
+        \vspace{9pt}
 
-    %---------------------------------------------------------
-    \cventry
-    {Most of the projects were done individually, at the explicit request of the professor.}
-    {Academic Projects}
-    {Politecnico di Milano, Milan (IT) \& University of Waterloo, Waterloo (CA)}
-    {Sep 2020 - May 2025}
-    {
-        \begin{cvitems}
-            \item {\textbf{Modeling and Control of a MagLev system}: analysis of the dynamics of a magnetic levitation system, parameter identification and control/filters design (PID, LQR and MPC, coupled with KF and EKF). Simulation in MATLAB/Simulink and hardware deployment on \textit{RTDAC/PCI I/O} board from INTECO.}
-            \item {\textbf{Implementation of path planning algorithms}: memory-efficient graph and sample-based search algorithms (\textbf{A*, Dijkstra, RRT, RRT*} and \textbf{RRT-Kinodynamic}) for path planning in robotics. Implementation in \textbf{MATLAB}, validation on both 2D and 3D environments via \textbf{ROS} ecosystem.}
-            \item {\textbf{Study on Nonreciprocal Behavior in Time-Space Modulated Beams}: analysis of diode-like behavior in time-space modulated beams by means of piezoelectric shunts. Structure simulations in Comsol Multiphysics, experimental data analysis with MATLAB.}
-            \item {\textbf{Implementation of Nonlinear FEA Solver with Plasticity}: developed \textbf{radial return algorithm} using \textbf{Newton-Raphson} iteration for \textbf{von Mises} plasticity with power-law isotropic hardening.}
-            \item {\textbf{Development of 2D CFD solver in C/C++ for the solution of the Navier-Stokes equations for incompressible flows}: implementation of the \textbf{SCGS} and \textbf{SIMPLE} algorithms, with validation on the lid-driven cavity flow.}
-            \item {\textbf{Topology Optimization of Hub Carrier}: mass minimization of a hub carrier structure, with constraints on the compliance and the manufacturability. Analysis with Altair HyperWorks suite.}
-            \item {\textbf{Topology Optimization of 2D structures}: implementation of optimization routines based on the CONLIN algorithm. Validation on both discrete and continuous problems.}
-            \item {\textbf{Structural Health Monitoring (SHM) as a multivariate outlier detection problem}: analysis of a tie-rods element subjected to both damage and environmental variability, by means of statistical indices as Mahalanobis Squared Distance (MSD) and Principal Component Analysis (PCA).}
-            \item {\textbf{Drag Coefficient Analysis of a Model Rocket}: simulation of the flow around a model rocket using \textbf{Ansys Fluent} to determine the drag coefficient and comparison with theoretical model.}
-            \item {\textbf{Chip Scale Atomic Clocks (CSAC)}: analysis of the physics behind their operation and current state of the art, with a focus on MEMS/NEMS technology.}
-            \item {\textbf{Laser/Material Interaction}: thermal analysis of the laser cutting process, with a focus on the vaporization and melt mechanisms.}
-            \item {\textbf{Analysis of the electronic density for a given molecule}: visualization of the electronic density field of a molecule using \textbf{MATLAB}.}
-        \end{cvitems}
-    }
+        %---------------------------------------------------------
+        \input{common/projects/fea-solver.tex}
 
+        \vspace{9pt}
+
+        %---------------------------------------------------------
+        \input{common/projects/rocket.tex}
+
+        \vspace{9pt}
+
+        %---------------------------------------------------------
+        \input{common/projects/rocket-drag.tex}
+    \fi
+
+    \ifdefined\IsMechatronics
+        %---------------------------------------------------------
+        \input{common/projects/maglev.tex}
+
+        \vspace{9pt}
+
+        %---------------------------------------------------------
+        \input{common/projects/rocket.tex}
+
+        \vspace{9pt}
+
+        %---------------------------------------------------------
+        \input{common/projects/shm.tex}
+    \fi
+
+    \ifdefined\IsSuperconductivity
+        %---------------------------------------------------------
+        \input{common/projects/maglev.tex}
+
+        \vspace{9pt}
+
+        %---------------------------------------------------------
+        \input{common/projects/fea-solver.tex}
+
+        \vspace{9pt}
+
+        %---------------------------------------------------------
+        \input{common/projects/cfd-solver.tex}
+    \fi
 
 \end{cventries}
